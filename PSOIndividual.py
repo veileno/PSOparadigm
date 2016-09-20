@@ -43,6 +43,7 @@ class PSOIndividual(object):
         计算个体粒子的适应度
         '''
         y = ObjFunction.GrieFunc(self.vardim, self.particle, self.bound)
+        # y = ObjFunction.RoseFunc(self.vardim, self.particle, self.bound)
         # y = ObjFunction.RastFunc(self.vardim, self.particle, self.bound)
         # 将函数值转化成适应度值，范围为(0, 1],目标是max(fitness)
         self.fitness = 1. / (1. + y)

@@ -122,6 +122,6 @@ class PSO(object):
 
 
 if __name__ == "__main__":
-    bound = np.tile([[-400], [400]], 25)
-    pso = PSO(60, 25, bound, 200, [0.7298, 1.4962, 1.4962])
+    bound = np.tile([[-400], [400]], 30)
+    pso = PSO(60, 30, bound, 300, [0.6298, 1.4962, 1.4962])
     pso.solve()

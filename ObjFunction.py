@@ -28,3 +28,18 @@ def RastFunc(vardim, x, bound):
     for i in range(vardim):
         s = s + x[i] ** 2 - 10 * math.cos(2 * math.pi * x[i])
     return s
+
+
+def RoseFunc(vardim, x, bound):
+    """
+    Rosenbrock function
+    此函数在x为2，3维时还能正确求解，4维及以上貌似不能求解
+    :param vardim:
+    :param x:
+    :param bound:
+    :return:
+    """
+    s = 0
+    for i in range(vardim - 1):
+        s = s + 100. * (x[i + 1] - x[i] ** 2) ** 2 + (x[i] - 1) ** 2
+    return s
